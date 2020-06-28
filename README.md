@@ -4,11 +4,11 @@
 
 See: https://www.udemy.com/course/python-3-na-web-com-django-basico-intermediario
 
->Framework de estilos: Pure CSS
+> Framework de estilos: Pure CSS
 
 See: https://purecss.io
 
->Biblioteca Javascript: YUI
+> Biblioteca Javascript: YUI
 
 See: https://yuilibrary.com
 
@@ -20,20 +20,20 @@ See: https://yuilibrary.com
 >* `python3 get-pip.py`
 >
 >* Instalar Pip em Ubuntu e derivados
->  >* `sudo apt install python3-pip`
+>  * `sudo apt install python3-pip`
 
 * Criar um Virtual Enviroment
 >* Instalar o virtualenv:
->  >* `pip3 install virtualenv`
+>  * `pip3 install virtualenv`
 >* Rodar o comando:
->  >* `virtualenv venv -p '<path_ onde está a instalação do Python>'` 
->  >* Exemplo: `virtualenv venv -p /usr/lib/python3.8`
+>  * `virtualenv venv -p '<path_ onde está a instalação do Python>'` 
+>  * Exemplo: `virtualenv venv -p /usr/lib/python3.8`
 >
 * Ativar o ambiente virtual
 >* Acessar a pasta onde está o activate: 
->  >* `cd venv/bin`
+>  * `cd venv/bin`
 >* Executar o comando para ativar
->  >* `. activate`
+>  * `. activate`
 
 ## Instalar o Django
 
@@ -43,8 +43,8 @@ See: https://yuilibrary.com
 >
 > Testando a instalação:
 >* `python`
->* `import django`
- >* >* Se não apresentou erro, é porque funcionou.
+>* `import django` 
+>  * Se não apresentou erro, é porque funcionou.
 ## Django admin
 > Na raiz do projeto executar o comando:
 >
@@ -57,7 +57,8 @@ See: https://yuilibrary.com
 ## Criando minha primeira aplicação:
 > `python manage.py startapp core`
 > 
-> Django é baseado em apps, (Ver sessão arquivos instalados no arquivo: ./simplemooc/simplemooc/settings.py)
+> Django é baseado em apps, (Ver sessão arquiv
+>os instalados no arquivo: ./simplemooc/simplemooc/settings.py)
 
 ## Rodando
 > Na pasta simplemooc executar o comando:
