@@ -43,3 +43,10 @@ See: https://yuilibrary.com
 > `django-admin.py startproject simplemooc`
 >
 > 
+## Criando tabelas no banco
+> `python manage.py migrate --run-syncdb`
+
+## Criando minha primeira aplicação:
+> `python manage.py startapp core`
+> 
+> Django é baseado em apps, (Ver sessão arquivos instalados no arquivo: ./simplemooc/simplemooc/settings.py)
