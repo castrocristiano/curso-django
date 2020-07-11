@@ -61,5 +61,11 @@ See: https://yuilibrary.com
 >os instalados no arquivo: ./simplemooc/simplemooc/settings.py)
 
 ## Rodando
-> Na pasta simplemooc executar o comando:
->* `python manage.py runserver`
+> Na pasta simplemooc executar o comando: 
+>
+> `python manage.py runserver`
+
+## Criando superuser
+> Rodar o comando:
+>
+> `python manage.py createsuperuser`
