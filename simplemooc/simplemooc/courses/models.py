@@ -8,7 +8,17 @@ from django.db import models
 '''
 
 
+class CourseManager(models.Manager):
+
+    def search(self, query):
+        return self.get_queryset().filter(
+            models.Q(name__icontains=query) |
+            models.Q(description__icontains=query)
+        )
+
+
 class Course(models.Model):
+    ''' See: https://docs.djangoproject.com/pt-br/3.0/ref/models '''
     name = models.CharField('Nome', max_length=100)
     slug = models.SlugField('Atalho')
     description = models.TextField('Descrição', blank=True)
@@ -25,3 +35,5 @@ class Course(models.Model):
     )
     create_at = models.DateTimeField('Criado em', auto_now_add=True)
     updated = models.DateTimeField('Atualizado em', auto_now_add=True)
+
+    objects = CourseManager()
