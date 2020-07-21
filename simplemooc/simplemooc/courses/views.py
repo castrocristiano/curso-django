@@ -12,10 +12,20 @@ def index(request):
     }
     return render(request, TEMPLATE_COURSES, context)
 
+'''
+    def details(request, pk):
+        # course = Course.objects.get(pk=pk)
+        course = get_object_or_404(Course, slug=pk)
+        context = {
+            'course': course
+        }
+        return render(request, TEMPLATE_DETAILS, context)
+'''
 
-def details(request, pk):
+
+def details(request, slug):
     # course = Course.objects.get(pk=pk)
-    course = get_object_or_404(Course, pk=pk)
+    course = get_object_or_404(Course, slug=slug)
     context = {
         'course': course
     }

@@ -1,4 +1,5 @@
 from django.db import models
+from django.urls import reverse
 
 
 class CourseManager(models.Manager):
@@ -8,6 +9,7 @@ class CourseManager(models.Manager):
         Para preparar as tabelas para geração, executar o comando: python manage.py makemigrations
         Para gerar, executar o comando: migrate --run-syncdb
     """
+
     def search(self, query):
         return self.get_queryset().filter(
             models.Q(name__icontains=query) |
@@ -40,6 +42,10 @@ class Course(models.Model):
 
     def __str__(self):
         return self.name
+
+    def get_absolute_url(self):
+        # Não funciona bem: return reverse('courses:details', (), {'slug': self.slug})
+        return reverse('courses:details', args=[self.slug])
 
     class Meta:
         """
