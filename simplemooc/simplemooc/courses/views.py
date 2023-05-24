@@ -1,3 +1,32 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
+from simplemooc.courses.models import Course
 
-# Create your views here.
+TEMPLATE_COURSES = 'courses/index.html'
+TEMPLATE_DETAILS = 'courses/details.html'
+
+
+def index(request):
+    courses = Course.objects.all()
+    context = {
+        'courses': courses
+    }
+    return render(request, TEMPLATE_COURSES, context)
+
+'''
+    def details(request, pk):
+        # course = Course.objects.get(pk=pk)
+        course = get_object_or_404(Course, slug=pk)
+        context = {
+            'course': course
+        }
+        return render(request, TEMPLATE_DETAILS, context)
+'''
+
+
+def details(request, slug):
+    # course = Course.objects.get(pk=pk)
+    course = get_object_or_404(Course, slug=slug)
+    context = {
+        'course': course
+    }
+    return render(request, TEMPLATE_DETAILS, context)
